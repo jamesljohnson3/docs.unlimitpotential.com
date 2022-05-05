@@ -4,6 +4,18 @@ auto_deploy: false
 admin_path: 
 webhook_url: 
 sections:
+- type: jekyll-posts
+  label: parent
+  create: all
+  match: "**/*"
+  templates:
+  - page
+- type: jekyll-pages
+  label: children
+  create: all
+  match: "**/*"
+  templates:
+  - children-page
 - type: directory
   path: docs
   label: Docs
