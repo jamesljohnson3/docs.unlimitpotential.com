@@ -7,13 +7,11 @@ sections:
 - type: jekyll-posts
   label: parent
   create: all
-  match: "**/*"
   templates:
   - page
 - type: jekyll-pages
   label: children
   create: all
-  match: "**/*"
   templates:
   - children-page
 - type: directory
@@ -38,6 +36,9 @@ file_template: ":filename:"
 build:
   preview_env:
   - JEKYLL_ENV=staging
+  - UNIFORM_API_KEY=uf1w9l4c3zdg4fjf9jjhzrpsccn4eqwmdjegtcm5hshyp9pv940ka96mk63gx693r0pxwkmpncjur50n2sgvujs38svevx79c
+    UNIFORM_PROJECT_ID=ff410d04-d594-4b77-a987-5256d3749805 CONTENTFUL_SPACE_ID=9i6monomvi82
+    CONTENTFUL_ENVIRONMENT=master GA_UA_ID=UA-225469170-1=
   preview_output_directory: _site
   install_dependencies_command: bundle install --path vendor/bundle
   preview_docker_image: forestryio/ruby:2.6
